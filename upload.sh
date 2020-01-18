@@ -3,7 +3,7 @@
 VersionString=`grep -E 's.version.*=' ZYNetworking.podspec`
 VersionNumber=`tr -cd 0-9 <<<"$VersionString"`
 
-NewVersionNumber=$(($VersionNumber + 0.1))
+NewVersionNumber=$(($VersionNumber + 1))
 LineNumber=`grep -nE 's.version.*=' ZYNetworking.podspec | cut -d : -f1`
 sed -i "" "${LineNumber}s/${VersionNumber}/${NewVersionNumber}/g" ZYNetworking.podspec
 
