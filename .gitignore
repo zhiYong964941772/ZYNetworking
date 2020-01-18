@@ -1,0 +1,7 @@
+ZYNetworking.xcodeproj/xcuserdata/
+ZYNetworking.xcworkspace/
+Pods/
+*.swp
+Podfile.lock
+.DS_Store
+ZYNetworking.xcodeproj/project.xcworkspace/xcuserdata/
