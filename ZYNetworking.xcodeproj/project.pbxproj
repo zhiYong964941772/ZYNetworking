@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,7 +15,6 @@
 		926390E123C875B9001CCB03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 926390E023C875B9001CCB03 /* Assets.xcassets */; };
 		926390E423C875B9001CCB03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 926390E223C875B9001CCB03 /* LaunchScreen.storyboard */; };
 		926390E723C875B9001CCB03 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 926390E623C875B9001CCB03 /* main.m */; };
-		92C4E3BE23CEC837001AA6B9 /* reformerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 92C4E3BD23CEC837001AA6B9 /* reformerTest.m */; };
 		92C4E3CE23D06EA3001AA6B9 /* NSURLRequest+ZYNetworkingMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 92C4E3CD23D06EA3001AA6B9 /* NSURLRequest+ZYNetworkingMethods.m */; };
 		92C4E3D423D07138001AA6B9 /* NSObject+ZYNetWorkingMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 92C4E3D323D07138001AA6B9 /* NSObject+ZYNetWorkingMethods.m */; };
 		92C4E3D723D07212001AA6B9 /* NSString+ZYNetWorkingMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 92C4E3D623D07212001AA6B9 /* NSString+ZYNetWorkingMethods.m */; };
@@ -50,8 +49,6 @@
 		926390E623C875B9001CCB03 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		926390EE23C879A6001CCB03 /* ZYNetworking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYNetworking.h; sourceTree = "<group>"; };
 		926390EF23C87B17001CCB03 /* ZYNetworkingConfiguration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYNetworkingConfiguration.h; sourceTree = "<group>"; };
-		92C4E3BC23CEC837001AA6B9 /* reformerTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = reformerTest.h; sourceTree = "<group>"; };
-		92C4E3BD23CEC837001AA6B9 /* reformerTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = reformerTest.m; sourceTree = "<group>"; };
 		92C4E3C423D06BC4001AA6B9 /* ZYServiceProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYServiceProtocol.h; sourceTree = "<group>"; };
 		92C4E3CC23D06EA3001AA6B9 /* NSURLRequest+ZYNetworkingMethods.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSURLRequest+ZYNetworkingMethods.h"; sourceTree = "<group>"; };
 		92C4E3CD23D06EA3001AA6B9 /* NSURLRequest+ZYNetworkingMethods.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+ZYNetworkingMethods.m"; sourceTree = "<group>"; };
@@ -151,8 +148,6 @@
 				92C4E3C323D06B65001AA6B9 /* Services */,
 				926390EE23C879A6001CCB03 /* ZYNetworking.h */,
 				926390EF23C87B17001CCB03 /* ZYNetworkingConfiguration.h */,
-				92C4E3BC23CEC837001AA6B9 /* reformerTest.h */,
-				92C4E3BD23CEC837001AA6B9 /* reformerTest.m */,
 			);
 			path = ZYNetworking;
 			sourceTree = "<group>";
@@ -421,7 +416,6 @@
 				92C4E3DA23D148A6001AA6B9 /* NSMutableString+ZYNetWorkingMethods.m in Sources */,
 				92C4E40523D19360001AA6B9 /* ZYMemoryCacheDataCenter.m in Sources */,
 				926390DC23C875B7001CCB03 /* ViewController.m in Sources */,
-				92C4E3BE23CEC837001AA6B9 /* reformerTest.m in Sources */,
 				92C4E40B23D1B391001AA6B9 /* ZYAPIBaseManager.m in Sources */,
 				926390D623C875B7001CCB03 /* AppDelegate.m in Sources */,
 				92C4E3D423D07138001AA6B9 /* NSObject+ZYNetWorkingMethods.m in Sources */,
