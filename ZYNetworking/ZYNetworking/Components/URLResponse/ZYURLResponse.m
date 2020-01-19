@@ -52,7 +52,7 @@
 }
 - (ZYURLResponseStatus)responseStatusWithError:(NSError *)error {
     if (error) {
-        ZYURLResponseStatus status = ZYURLResponseStatusErrorNoNetwork;
+        ZYURLResponseStatus status = ZYURLResponseStatusErrorNotNetwork;
         if (error.code == NSURLErrorTimedOut) {
             status = ZYURLResponseStatusErrorTimeout;
         }
@@ -60,7 +60,7 @@
             status = ZYURLResponseStatusErrorCancel;
         }
         if (error.code == NSURLErrorNotConnectedToInternet) {
-            status = ZYURLResponseStatusErrorNoNetwork;
+            status = ZYURLResponseStatusErrorNotNetwork;
         }
         return status;
     }else{
