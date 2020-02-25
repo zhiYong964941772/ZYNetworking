@@ -9,6 +9,13 @@
 #ifndef ZYNetworking_h
 #define ZYNetworking_h
 
+#import "ZYServiceProtocol.h"
+#import "ZYNetworkingConfiguration.h"
 
+#import "NSURLRequest+ZYNetworkingMethods.h"
+#import "NSString+ZYNetWorkingMethods.h"
+
+#import "ZYAPIBaseManager.h"
+#import "ZYServiceFactory.h"
 
 #endif /* ZYNetworking_h */
