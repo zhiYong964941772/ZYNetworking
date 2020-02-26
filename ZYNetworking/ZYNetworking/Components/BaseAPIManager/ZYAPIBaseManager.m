@@ -61,10 +61,47 @@ NSString * const ZYAPIBaseManagerRequestID = @"ZYAPIBaseManagerRequestID";
 - (void)dealloc{
     [self cancelAllRequests];
 }
+#pragma mark - public methods
+
 - (void)cancelAllRequests{
     [[ZYApiProxy sharedInstance]cancelRequestWithRequestIDList:self.requestIdList];
-    [self.requestIdList removeAllObjects];
     self.requestIdList = nil;
+}
+- (void)cancelRequestWithRequestId:(NSInteger)requestID
+{
+    [self removeRequestIdWithRequestID:requestID];
+    [[ZYApiProxy sharedInstance] cancelRequestWithRequestID:@(requestID)];
+}
+
+- (id)fetchDataWithReformer:(id<ZYAPIManagerDataReformer>)reformer
+{
+    id resultData = nil;
+    if ([reformer respondsToSelector:@selector(manager:reformData:)]) {
+        resultData = [reformer manager:self reformData:self.fetchedRawData];
+    } else {
+        resultData = [self.fetchedRawData mutableCopy];
+    }
+    return resultData;
+}
+#pragma mark - calling api
+- (NSInteger)loadData
+{
+    NSDictionary *params = [self.paramSource paramsForApi:self];
+    NSInteger requestId = [self loadDataWithParams:params];
+    return requestId;
+}
+
++ (NSInteger)loadDataWithParams:(NSDictionary *)params success:(void (^)(ZYAPIBaseManager *))successCallback fail:(void (^)(ZYAPIBaseManager *))failCallback
+{
+    return [[[self alloc] init] loadDataWithParams:params success:successCallback fail:failCallback];
+}
+
+- (NSInteger)loadDataWithParams:(NSDictionary *)params success:(void (^)(ZYAPIBaseManager *))successCallback fail:(void (^)(ZYAPIBaseManager *))failCallback
+{
+    self.successBlock = successCallback;
+    self.failBlock = failCallback;
+
+    return [self loadDataWithParams:params];
 }
 #pragma mark -- requestApi
 - (NSInteger)loadDataWithParams:(NSDictionary *)params{
